@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Himanshika Singla — Software Engineer</title>
+  <meta name="description" content="Portfolio of Himanshika Singla — C++ Software Engineer (Windows internals, multithreading, system-level programming)."/>
+  <style>
+    :root{
+      --bg:#1a1a1a;
+      --card:#222222;
+      --muted:#cccccc;
+      --accent:#ff6a00; /* orange accent */
+      --glass:rgba(255,255,255,0.03);
+      --glass-2:rgba(255,255,255,0.02);
+    }
+    *{box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      background:linear-gradient(180deg,#111 0%, #1a1a1a 70%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+    }
+    .container{max-width:1000px;margin:36px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff9a42);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px;transition:0.3s;}
+    nav a:hover{color:var(--accent)}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:22px}
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      transition:0.3s;
+    }
+    .card:hover{border-color:var(--accent);}
+    .section-title{font-size:16px;margin:0 0 12px;color:#ff9a42}
+    .about p{color:var(--muted);line-height:1.5}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:6px 10px;border-radius:8px;color:var(--muted);font-size:13px;transition:0.3s;}
+    .skill:hover{background:var(--accent);color:white;}
+
+    .projects .project{
+      border-radius:10px;
+      padding:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      margin-bottom:12px;
+      border:1px solid rgba(255,255,255,0.02);
+      transition:0.3s;
+      cursor:pointer;
+    }
+    .project:hover{border-color:var(--accent);background:linear-gradient(180deg, rgba(255,106,0,0.1), rgba(255,106,0,0.05));}
+
+    .project h4{margin:0;font-size:15px}
+    .project p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .project .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;color:var(--muted);background:var(--glass-2);padding:5px 8px;border-radius:6px}
+
+    aside .meta{display:flex;flex-direction:column;gap:12px}
+    .meta .card{padding:14px}
+
+    .contact a{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none}
+
+    .exp-item{margin-bottom:10px}
+    .exp-item .meta{color:var(--muted);font-size:13px}
+    .exp-item ul{margin:8px 0 0;padding-left:18px;color:var(--muted);line-height:1.45}
+
+    footer{text-align:center;color:var(--muted);margin:30px 0 10px;font-size:13px}
+
+    @media (max-width:980px){.grid{grid-template-columns:1fr;}.container{padding:16px}}
+
+    .btn{
+      background:linear-gradient(90deg,var(--accent),#ff9a42);
+      color:white;
+      padding:8px 12px;
+      border-radius:8px;
+      border:none;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .btn:hover{opacity:0.8;}
+
+    /* Animation initial state */
+    .before-animate{
+      opacity:0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    /* Animation active state */
+    .animate{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">HS</div>
+        <div>
+          <h1>Himanshika Singla</h1>
+          <p class="lead">Software Engineer — C++, Windows Internals, Multithreading</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section id="about" class="card about before-animate">
+          <h2 class="section-title">About</h2>
+          <p>I build high-performance C++ applications with system-level programming, debugging, and multithreaded design. I collaborate with teams to deliver production-ready solutions and solve complex algorithmic challenges.</p>
+          <div style="margin-top:14px">
+            <h3 class="section-title">Core Skills</h3>
+            <div class="skills">
+              <div class="skill">C++ (11/14/17)</div>
+              <div class="skill">OOP & STL</div>
+              <div class="skill">Multithreading</div>
+              <div class="skill">Memory Management</div>
+              <div class="skill">Win32 APIs</div>
+              <div class="skill">Debugging (WinDbg)</div>
+              <div class="skill">Algorithms & DSA</div>
+              <div class="skill">UI Automation</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card projects before-animate" style="margin-top:18px">
+          <h2 class="section-title">Selected Projects</h2>
+
+          <article class="project" onclick="window.open('https://github.com/himanshikasingla/InputRecorderPlayback','_blank')">
+            <h4>Windows Event Capture & Replay Tool</h4>
+            <p>Desktop tool to capture and replay input events using Win32 hooks and UI Automation. Integrated into QA pipelines to reduce manual testing.</p>
+            <div class="tags">
+              <div class="tag">C++</div>
+              <div class="tag">MFC</div>
+              <div class="tag">Win32 Hooks</div>
+              <div class="tag">QA Automation</div>
+            </div>
+          </article>
+
+          <article class="project" onclick="window.open('https://github.com/himanshikasingla/CompetitiveCodingJudge','_blank')">
+            <h4>C++ Competitive Coding Judge (DSA Engine)</h4>
+            <p>Backend engine for validating algorithmic solutions, supporting concurrent submissions with thread-safe synchronization and optimized memory usage.</p>
+            <div class="tags">
+              <div class="tag">C++</div>
+              <div class="tag">STL</div>
+              <div class="tag">Multithreading</div>
+              <div class="tag">Memory Pools</div>
+            </div>
+          </article>
+
+          <article class="project">
+            <h4>Endpoint Protection & Anti-Fraud Enhancements</h4>
+            <p>Implemented POC for detecting third-party remote access tools and real-time fraud detection. (Confidential — internal)</p>
+            <div class="tags">
+              <div class="tag">C++</div>
+              <div class="tag">Security</div>
+              <div class="tag">WinDbg</div>
+            </div>
+          </article>
+
+        </section>
+
+        <section id="experience" class="card before-animate" style="margin-top:18px">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="exp-item">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div><strong>Quick Heal Technologies</strong> — Software Engineer</div>
+              <div class="meta">Jan 2022 — Present</div>
+            </div>
+            <ul>
+              <li>Designed and developed C++ modules for Windows-based security products, focusing on performance and maintainability.</li>
+              <li>Implemented multithreaded components and resolved concurrency issues.</li>
+              <li>Debugged using WinDbg and Sysinternals to fix critical production issues.</li>
+              <li>Automated QA workflows and collaborated with cross-functional teams for releases.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div><strong>Software Engineer Intern</strong> — Quick Heal Technologies</div>
+              <div class="meta">Jan 2022 — Jun 2022</div>
+            </div>
+            <ul>
+              <li>Built MFC-based automation tool to simulate UI workflows and improve GUI testing coverage.</li>
+              <li>Implemented Windows Hooking APIs for input capture and replay.</li>
+            </ul>
+          </div>
+
+        </section>
+      </main>
+
+      <aside>
+        <div class="meta">
+          <div class="card contact before-animate" id="contact">
+            <h3 class="section-title">Contact</h3>
+            <div class="label">Phone</div>
+            <div class="meta">+91-9988166757</div>
+            <div style="margin-top:8px" class="label">Email</div>
+            <div class="meta"><a class="link-muted" href="mailto:himanshikasingla2001@gmail.com">himanshikasingla2001@gmail.com</a></div>
+            <div style="margin-top:10px">
+              <a class="link-muted" href="https://www.linkedin.com/in/himanshika-singla-b35445202/" target="_blank">LinkedIn</a> •
+              <a class="link-muted" href="https://github.com/himanshikasingla" target="_blank">GitHub</a>
+            </div>
+            <div style="margin-top:12px"><button class="btn" onclick="window.location='mailto:himanshikasingla2001@gmail.com'">Get in touch</button></div>
+          </div>
+
+          <div class="card before-animate">
+            <h3 class="section-title">Technical Skills</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;color:var(--muted)">
+              <div>C++, OOPS, STL, Algorithms</div>
+              <div>Multithreading, Concurrency, Memory Management</div>
+              <div>Win32 APIs, Windows Internals, WinDbg</div>
+              <div>MFC, UI Automation, Debugging Tools</div>
+              <div>Git, Visual Studio, Performance Tuning</div>
+            </div>
+          </div>
+
+          <div class="card before-animate">
+            <h3 class="section-title">Education</h3>
+            <div style="color:var(--muted)">B.E. in Computer Engineering — Chitkara University (GPA: 9.71/10)</div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      })
+    });
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.before-animate').forEach(el=>{
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
